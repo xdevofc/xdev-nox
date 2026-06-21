@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
-import { program } from "commander"; 
+import { Command } from "commander"; 
+import { saveFile } from "../src/commands/save-file.js";
+
+const program =  new Command();
 
 program
-	.version("1.0.0")
+	.name('nox')
 	.description("Creating a tool to make terminal development more easy")
-	.option("-g, --grab <type>", "add the file name")
-	.action((options) => {
-		console.log(`Hey , ${options.grab}!`);
-	})
+	.version("1.0.0")
+
+program.addCommand(saveFile);
 
 program.parse(process.argv);

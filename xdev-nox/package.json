@@ -4,7 +4,7 @@
   "description": "a tool created to make terminal workflows easier",
   "license": "ISC",
   "author": "xdevofc (Sergio Caceres)",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,6 @@
   "bin": {
     "nox": "./bin/index.js"
   },
-  "type":"module",
   "dependencies": {
     "commander": "^15.0.0",
     "yargs": "^18.0.0"
